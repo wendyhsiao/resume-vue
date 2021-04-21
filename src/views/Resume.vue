@@ -4,6 +4,7 @@
     <Skill />
     <Project />
     <WorkExperience />
+    <Education />
   </div>
 </template>
 
@@ -12,13 +13,15 @@ import SelfIntroductio from '../components/SelfIntroductio.vue'
 import Skill from '../components/Skill.vue'
 import Project from '../components/Project.vue'
 import WorkExperience from '../components/WorkExperience.vue'
+import Education from '../components/Education.vue'
 
 export default {
   components: {
     SelfIntroductio,
     Skill,
     Project,
-    WorkExperience
+    WorkExperience,
+    Education
   }
 }
 </script>
