@@ -1,10 +1,11 @@
 <template>
-  <div class="introductio">
+  <div class="introductio wrapper-full">
     <div class="catch">
       <div class="content">
         <div class="picture"></div>
         <div class="detail">
-          <h1>蕭琬蓉 Wendy Hsiao</h1>
+          <h2>關於我 About Me</h2>
+          <p>蕭琬蓉 Wendy Hsiao</p>
           <p>新北市，台灣</p>
           <p>0932-209-127</p>
           <p>wendy19940331@gmail.com</p>
@@ -19,39 +20,28 @@
 
 <style scoped>
   .introductio {
-    width: 100vw;
     height: 100vh;
-    background-color: antiquewhite;
+    background:  url('../../public/img/writing-in-notebook.jpg') no-repeat top 100% center/cover fixed;
+    opacity: .8;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .content {
-    margin: 0 auto;
     background-color: #fff;
-    height: 75vh;
     width: 80vw;
-    /* width: 1000px; */
+    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .detail {
-    display: inline-block;
-    width: 40vw;
+    width: 60%;
     margin-left: 30px;
-    line-height: 2em;
-    color: #333;
-  }
-  .detail h1 {
-    font-size: 1.5em;
-    border-bottom: solid 2px #101010;
-    margin-bottom: 1em;
   }
   .picture {
-    display: inline-block;
     background-color: #333;
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 250px;
   }
 </style>

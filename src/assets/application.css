@@ -46,3 +46,22 @@ table {
      -moz-box-sizing: border-box;  
           box-sizing: border-box; 
 }
+
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: solid 2px #101010;
+    margin-bottom: 1em;
+    padding-bottom: .5em;
+}
+p {
+    line-height: 2em;
+    color: #333;
+}
+.wrapper {
+    width: 80vw;
+}
+.wrapper-full {
+    width: 100vw;
+}
