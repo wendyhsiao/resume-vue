@@ -55,13 +55,21 @@ h2 {
     margin-bottom: 1em;
     padding-bottom: .5em;
 }
-p {
+p, li {
     line-height: 2em;
     color: #333;
 }
 .wrapper {
-    width: 80vw;
+    width: 100vw;
+    padding: 4em 0;
 }
 .wrapper-full {
     width: 100vw;
+}
+.bg-color {
+    background-color: #e4e6db; /* #bec8a7; */
+}
+.vw-80 {
+    width: 80vw;
+    margin: 0 auto;
 }
