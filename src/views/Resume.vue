@@ -5,6 +5,7 @@
     <Project />
     <WorkExperience />
     <Education />
+    <Footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Skill from '../components/Skill.vue'
 import Project from '../components/Project.vue'
 import WorkExperience from '../components/WorkExperience.vue'
 import Education from '../components/Education.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     Skill,
     Project,
     WorkExperience,
-    Education
+    Education,
+    Footer
   }
 }
 </script>
