@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="resume">
     <Top />
     <SelfIntroductio />
     <Skill />
@@ -7,6 +7,9 @@
     <WorkExperience />
     <Education />
     <Footer />
+    <div v-if="isShow">
+      <BtnTop />
+    </div>
   </div>
 </template>
 
@@ -18,6 +21,7 @@ import Project from '../components/Project.vue'
 import WorkExperience from '../components/WorkExperience.vue'
 import Education from '../components/Education.vue'
 import Footer from '../components/Footer.vue'
+import BtnTop from '../components/BtnTop.vue'
 
 export default {
   components: {
@@ -27,7 +31,29 @@ export default {
     Project,
     WorkExperience,
     Education,
-    Footer
+    Footer,
+    BtnTop
+  },
+  data() {
+    return {
+      isShow: false
+    }
+  },
+  mounted() {
+    const vm = this;
+    window.onscroll = function(e) {
+      const scrollTop = e.target.scrollingElement.scrollTop
+      vm.showBtnTop(scrollTop)
+    };
+  },
+  methods: {
+    showBtnTop(top) {
+      if (top > 400) {
+        this.isShow = true
+      } else {
+        this.isShow = false
+      } 
+    }
   }
 }
 </script>
