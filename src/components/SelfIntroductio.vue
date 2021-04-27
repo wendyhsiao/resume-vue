@@ -3,18 +3,29 @@
     <div class="vw-80">
       <h2>關於我 About Me</h2>
       <div class="content">
-        <div class="picture"></div>
+        <div class="picture" :style="{backgroundImage: `url(${aboutMe.avatar2})`}"></div>
         <ul class="detail">
-          <li>地區</li>
-          <li>0912-345-678</li>
-          <li>qqqqqq@gmail.com</li>
-          <li>https://github.com/</li>
-          <li>文字文字文字文字，文字文字文字文字文字文字文字，文字文字文字文字：文字文字文字。文字文字文字文字文字。文字文字文字文字，文字文字文字文字，文字文字文字，文字文字文字文字文字文字，文字文字文字文字文字文字。文字文字文字文字文字文字文字，文字文字文字文字文字文字。文字文字文字，文字文字文字文字，文字文字，文字文字文字文字，文字文字文字文字文字文字。</li>
+          <li>{{aboutMe.address}}</li>
+          <li>{{aboutMe.phone}}</li>
+          <li>{{aboutMe.email}}</li>
+          <li>{{aboutMe.github}}</li>
+          <li>{{aboutMe.introduction}}</li>
         </ul>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    aboutMe: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
   .content {
@@ -28,6 +39,9 @@
   }
   .picture {
     background-color: #969799;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow:0 0 30px rgba(0, 0, 0, .1);
     width: 180px;
     height: 270px;
   }
