@@ -1,14 +1,25 @@
 <template>
   <div class="top-group wrapper-full">
     <div class="content vw-80">
-      <div class="picture"></div>
+      <div class="picture" :style="{backgroundImage: `url(${aboutMe.avatar1})`}"></div>
       <div class="detail">
-        <h1>HI, 我是 XXX Wendy </h1>
-        <h2>前端工程師 實習</h2>
+        <h1>HI, 我是{{aboutMe.name}}</h1>
+        <h2>{{aboutMe.position}}</h2>
       </div>
     </div>
   </div>  
 </template>
+
+<script>
+export default {
+  props: {
+    aboutMe: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
   h1 {
@@ -25,12 +36,23 @@
     padding-bottom: 0;
   }
   .top-group {
+    position: relative;
     height: 100vh;
-    background:  url('../../public/img/writing-in-notebook.jpg') no-repeat top 100% center/cover fixed;
-    opacity: .8;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 0;
+  }
+  .top-group::after {
+    background: url('../../public/img/writing-in-notebook.jpg') no-repeat top 100% center/cover fixed;
+    opacity: .8;
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    right: 0; 
+    left: 0; 
+    content: "";
+    z-index: -1; 
   }
   .content {
     background-color: #fff;
@@ -47,6 +69,8 @@
     border: 8px solid #e4e6db;
     border-radius: 270px;
     background-color: #969799;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 270px;
     height: 270px;
     margin-bottom: 2em;

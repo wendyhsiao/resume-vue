@@ -3,39 +3,15 @@
     <div class="experience-group vw-80">
       <h2>工作經驗 Work Experience</h2>
       <ul class="experience-list">
-        <li class="experience-item">
+        <li class="experience-item" v-for="(experience, index) in workExperience" :key="index">
           <div class="item-dot">
             <span></span>
           </div>
           <div class="item-text">
-            <h3>職位，YYYY 年 MM 月 - YYYY 年 MM 月</h3>
-            <p>主要工作內容確認客戶的需求
-              主要工作內容確認客戶的需求主要工作內容確認客戶的需求主要工作內容確認客戶的需求主要工作內容確認客戶的需求
-              主要工作內容確認客戶的需求主要工作內容確認客戶的需求主要工作內容確認客戶的需求
-            </p>
+            <h3>{{experience.workPosition}}</h3>
+            <p>{{experience.workDescription}}</p>
             <ul>
-              <li>主要工作內容確認客戶的需求</li>
-              <li>主要工作內容確認客戶的需求</li>
-              <li>主要工作內容確認客戶的需求</li>
-              <li>主要工作內容確認客戶的需求</li>
-              <li>主要工作內容確認客戶的需求</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="experience-item">
-          <div class="item-dot">
-            <span></span>
-          </div>
-          <div class="item-text">
-            <h3>職位，YYYY 年 MM 月 - YYYY 年 MM 月</h3>
-            <p>主要工作內容確認客戶的需求。
-              主要工作內容確認客戶的需求主要工作內容確認客戶的需求主要工作內容確認客戶的需求
-            </p>
-            <ul>
-              <li>主要工作內容確認客戶的需求</li>
-              <li>主要工作內容確認客戶的需求</li>
-              <li>主要工作內容確認客戶的需求</li>
+              <li v-for="(item, index2) in experience.workItem" :key="index2">{{item}}</li>
             </ul>
           </div>
         </li>
@@ -43,6 +19,17 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    workExperience: {
+      type: Array,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
   .experience-list {
