@@ -6,33 +6,36 @@
         <div class="skill-item">
           <p>前端</p>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Bootstrap</li>
-            <li>Vue.js</li>
+            <li v-for="(skill, index) in skills.frontEnd" :key="index">{{skill}}</li>
           </ul>
         </div>
         <div class="skill-item">
           <p>後端</p>
           <ul>
-            <li>Node.js / Express.js</li>
-            <li>MySQL / Sequelize</li>
-            <li>MongoDB / Mongoose</li>
-            <li>RESTful API</li>
+            <li v-for="(skill, index) in skills.backEnd" :key="index">{{skill}}</li>
           </ul>
         </div>
         <div class="skill-item">
           <p>其他</p>
           <ul>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
+            <li v-for="(skill, index) in skills.others" :key="index">{{skill}}</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    skills: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
   .skill-group {
