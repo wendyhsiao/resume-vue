@@ -3,27 +3,29 @@
     <div class="education-group vw-80">
       <h2>學歷 Educatione</h2>
       <ul class="education-list">
-        <li class="education-item">
+        <li class="education-item" v-for="(item, index) in educatione" :key="index">
           <div class="item-dot">
             <span></span>
           </div>
           <div class="item-text">
-            <h3>學校 科系，YYYY 年 MM 月 - YYYY 年 MM 月</h3>
-          </div>
-        </li>
-
-        <li class="education-item">
-          <div class="item-dot">
-            <span></span>
-          </div>
-          <div class="item-text">
-            <h3>學校 科系，YYYY 年 MM 月 - YYYY 年 MM 月</h3>
+            <h3>{{item.school}}</h3>
           </div>
         </li>
       </ul>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    educatione: {
+      type: Array,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
   .education-list {
