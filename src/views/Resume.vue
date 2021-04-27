@@ -1,11 +1,11 @@
 <template>
   <div id="resume">
-    <Top />
-    <SelfIntroductio />
-    <Skill />
-    <Project />
-    <WorkExperience />
-    <Education />
+    <Top :aboutMe="aboutMe" />
+    <SelfIntroductio :aboutMe="aboutMe" />
+    <Skill :skills="skills" />
+    <Project :project="project" />
+    <WorkExperience :workExperience="workExperience" />
+    <Education :educatione="educatione" />
     <Footer />
     <div v-if="isShow">
       <BtnTop />
@@ -22,6 +22,7 @@ import WorkExperience from '../components/WorkExperience.vue'
 import Education from '../components/Education.vue'
 import Footer from '../components/Footer.vue'
 import BtnTop from '../components/BtnTop.vue'
+import data from '../../resume-data.js'
 
 export default {
   components: {
@@ -36,8 +37,16 @@ export default {
   },
   data() {
     return {
-      isShow: false
+      isShow: false,
+      aboutMe: {},
+      skills: {},
+      project: [],
+      workExperience: [],
+      educatione: []
     }
+  },
+  created() {
+    this.fetchResume()
   },
   mounted() {
     const vm = this;
@@ -53,6 +62,13 @@ export default {
       } else {
         this.isShow = false
       } 
+    },
+    fetchResume() {
+      this.aboutMe = data.aboutMe,
+      this.skills = data.skills,
+      this.project = data.project,
+      this.workExperience = data.workExperience,
+      this.educatione = data.educatione
     }
   }
 }
