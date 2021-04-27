@@ -3,41 +3,12 @@
     <div class="project-group vw-80">
       <h2>專案 Project</h2>
       <div class="project-list">
-        <div class="project-card bg-color">
-          <div class="card-img"></div>
+        <div v-for="(item, index) in project" :key="index" class="project-card bg-color">
+          <div class="card-img" :style="{backgroundImage: `url(${item.image})`}"></div>
           <div class="card-body">
-            <h3 class="card-title">GreatSmile 電商網頁</h3>
+            <h3 class="card-title">{{item.projectName}}</h3>
             <ul>
-              <li class="catd-subtitle">三人協作</li>
-              <li class="card-text">復刻 GoodSmile 電商網頁，三人協作開發。使用者可以在網上瀏覽選購商品，可透過會員功能查詢訂單資訊。</li>
-              <li class="card-text">前端：Handlebar, Bootstrap</li>
-              <li class="card-text">後端：Node.js, Express.js, MySQL</li>
-              <li class="card-text">開發項目：前台商品瀏覽頁、購物車頁、會員頁面、訂單確認頁、後台交易紀錄頁</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="project-card bg-color">
-          <div class="card-img"></div>
-          <div class="card-body">
-            <h3 class="card-title">GreatSmile 電商網頁</h3>
-            <ul>
-              <li class="catd-subtitle">三人協作</li>
-              <li class="card-text">復刻 GoodSmile 電商網頁，三人協作開發。</li>
-              <li class="card-text">前端：Handlebar, Bootstrap</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="project-card bg-color">
-          <div class="card-img"></div>
-          <div class="card-body">
-            <h3 class="card-title">GreatSmile 電商網頁</h3>
-            <ul>
-              <li class="catd-subtitle">三人協作</li>
-              <li class="card-text">復刻 GoodSmile 電商網頁，三人協作開發。使用者可以在網上瀏覽選購商品，可透過會員功能查詢訂單資訊。</li>
-              <li class="card-text">前端：Handlebar, Bootstrap</li>
-              <li class="card-text">後端：Node.js, Express.js, MySQL</li>
+              <li v-for="(content, index2) in item.content" :key="index2">{{content}}</li>
             </ul>
           </div>
         </div>
@@ -46,6 +17,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    project: {
+      type: Array,
+      required: true
+    }
+  }
+}
+</script>
 
 <style scoped>
   .project-list {
@@ -64,7 +45,6 @@
     position: relative;
     padding-bottom: 56%;
     background-color: #f3f3f3;
-    background-image: url('../../public/img/screencapture-greatsmile-herokuapp-products-2021-01-28-19_43_34.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
