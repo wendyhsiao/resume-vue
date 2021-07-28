@@ -44,7 +44,8 @@ table {
 * {
   -webkit-box-sizing: border-box; 
      -moz-box-sizing: border-box;  
-          box-sizing: border-box; 
+          box-sizing: border-box;
+    text-decoration:none
 }
 h1 {
     font-size: 2.5em;
@@ -68,7 +69,7 @@ h3 {
     line-height: 2em;
     color: #333;
 }
-p, li {
+p, li, a {
     font-size: 1em;
     line-height: 2em;
     color: #333;
@@ -98,7 +99,7 @@ p, li {
     h3 {
         font-size: 1em;
     }
-    p, li {
+    p, li, a {
         font-size: .8em;
     }
     .wrapper {
