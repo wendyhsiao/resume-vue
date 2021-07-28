@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
   h1 {
-    border-bottom: solid 2px #101010;
+    border-bottom: solid 2px #333;
     margin-bottom: .5em;
     padding-bottom: .5em;
   }
@@ -43,7 +43,7 @@ export default {
   }
   .top-group::after {
     background: url('../../public/img/writing-in-notebook.jpg') no-repeat top 100% center/cover fixed;
-    opacity: .8;
+    opacity: .5;
     position: absolute;
     top: 0; 
     bottom: 0;
@@ -54,7 +54,6 @@ export default {
   }
   .content {
     padding: 10px;
-    background-color: #fff;
     height: 75vh;
     display: flex;
     align-items: center;
@@ -80,7 +79,6 @@ export default {
     color: #fff;
     font-size: 1.5em;
     animation: slidedown 1.5s infinite;
-    /* animation-delay:2s; */
   }
   @keyframes slidedown{
     0% {
@@ -89,20 +87,10 @@ export default {
     50% {
       transform: translateY(25px);
     }
-    /* 50% {
-      transform: translateY(0);
-    } */
     100% {
       transform: translateY(0px);
     }
   }
-    /* from{
-      bottom: 3em;
-    }
-    to{
-      down:100px;
-      bottom: 1em;
-    } */
   
   @media (max-width: 768px) {
     .detail {
