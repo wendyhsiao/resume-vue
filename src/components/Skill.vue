@@ -43,13 +43,23 @@ export default {
   }
   .skill-list {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
   }
   .skill-item {
-    padding: 0 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 230px;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 200px;
   }
-
+  .skill-item h3 {
+    color: #448E96;
+  }
   @media (max-width: 768px) {
     .skill-list {
       flex-direction: column;
@@ -57,6 +67,8 @@ export default {
     .skill-item {
       padding: 0;
       margin-bottom: 10px;
+      max-width: 160px;
+      max-height: 160px;
     }
   }
 </style>
