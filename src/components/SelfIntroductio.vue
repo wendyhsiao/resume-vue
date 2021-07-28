@@ -35,7 +35,8 @@ export default {
   }
   .detail {
     width: 60%;
-    margin-left: 30px;
+    margin-left: 40px;
+    list-style: disc;
   }
   .picture {
     background-color: #969799;
@@ -44,5 +45,15 @@ export default {
     box-shadow:0 0 30px rgba(0, 0, 0, .1);
     width: 180px;
     height: 270px;
+  }
+
+  @media (max-width: 768px) {
+    .detail {
+      width: 100%;
+      margin-left: 15px;
+    }
+    .picture {
+      display: none;
+    }
   }
 </style>

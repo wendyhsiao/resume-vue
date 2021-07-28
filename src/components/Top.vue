@@ -7,6 +7,7 @@
         <h2>{{aboutMe.position}}</h2>
       </div>
     </div>
+    <i class="fas fa-chevron-down"></i>
   </div>  
 </template>
 
@@ -23,9 +24,6 @@ export default {
 
 <style scoped>
   h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
     border-bottom: solid 2px #101010;
     margin-bottom: .5em;
     padding-bottom: .5em;
@@ -55,6 +53,7 @@ export default {
     z-index: -1; 
   }
   .content {
+    padding: 10px;
     background-color: #fff;
     height: 75vh;
     display: flex;
@@ -75,4 +74,45 @@ export default {
     height: 270px;
     margin-bottom: 2em;
   }
+  .fa-chevron-down {
+    position: absolute;
+    bottom: 1.5em;
+    color: #fff;
+    font-size: 1.5em;
+    animation: slidedown 1.5s infinite;
+    /* animation-delay:2s; */
+  }
+  @keyframes slidedown{
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(25px);
+    }
+    /* 50% {
+      transform: translateY(0);
+    } */
+    100% {
+      transform: translateY(0px);
+    }
+  }
+    /* from{
+      bottom: 3em;
+    }
+    to{
+      down:100px;
+      bottom: 1em;
+    } */
+  
+  @media (max-width: 768px) {
+    .detail {
+      width: 80%;
+    }
+    .picture {
+      width: 150px;
+      height: 150px;
+      border: 5px solid #e4e6db
+    }
+    
+   }
 </style>

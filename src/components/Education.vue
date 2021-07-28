@@ -9,6 +9,7 @@
           </div>
           <div class="item-text">
             <h3>{{item.school}}</h3>
+            <h3>{{item.time}}</h3>
           </div>
         </li>
       </ul>
@@ -61,5 +62,24 @@ export default {
   .education-item  .item-text {
     padding: 0 0 1em 2em;
     width: 95%;
+  }
+
+  @media (max-width: 768px) {
+    .education-list {
+      width: 100%;
+      padding: 0;
+    }
+    .education-item .item-dot span {
+      width: 10px;
+      height: 10px;
+    }
+    .education-item  .item-text {
+      padding: 0 0 1em .8em;
+      width: 95%;
+    }
+    .education-item  .item-text ul {
+      list-style-type: disc;
+      padding-left: 1.6em;
+    }
   }
 </style>

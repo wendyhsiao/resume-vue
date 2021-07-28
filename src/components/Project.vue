@@ -55,4 +55,19 @@ export default {
     list-style-type: disc;
     padding-left: 2em;
   }
+  @media (max-width: 768px) {
+    .project-list {
+      width: 100%;
+    }
+    .project-card {
+      width: 100%;
+      margin: .8em 0;
+    }
+    .card-body {
+      padding: .8em;
+    }
+    .card-body ul {
+      padding-left: 1.2em;
+    }
+  }
 </style>

@@ -46,7 +46,11 @@ table {
      -moz-box-sizing: border-box;  
           box-sizing: border-box; 
 }
-
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
 h2 {
     font-size: 2em;
     font-weight: bold;
@@ -59,8 +63,10 @@ h3 {
     font-size: 1.5em;
     font-weight: bold;
     line-height: 2em;
+    color: #333;
 }
 p, li {
+    font-size: 1em;
     line-height: 2em;
     color: #333;
 }
@@ -77,4 +83,22 @@ p, li {
 .vw-80 {
     width: 80vw;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    p, li {
+        font-size: .8em;
+    }
+    .wrapper {
+        padding: 2em 0;
+    }
 }

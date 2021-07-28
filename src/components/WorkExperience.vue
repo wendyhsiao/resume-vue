@@ -9,6 +9,7 @@
           </div>
           <div class="item-text">
             <h3>{{experience.workPosition}}</h3>
+            <h3>{{experience.workTime}}</h3>
             <p>{{experience.workDescription}}</p>
             <ul>
               <li v-for="(item, index2) in experience.workItem" :key="index2">{{item}}</li>
@@ -69,5 +70,23 @@ export default {
   .experience-item  .item-text ul {
     list-style-type: disc;
     padding-left: 2em;
+  }
+
+  @media (max-width: 768px) {
+    .experience-list {
+      width: 100%;
+      padding: 0;
+    }
+    .experience-item .item-dot span {
+      width: 10px;
+      height: 10px;
+    }
+    .experience-item  .item-text {
+      padding: 0 0 1em .8em;
+      width: 95%;
+    }
+    .experience-item  .item-text ul {
+      padding-left: 1.6em;
+    }
   }
 </style>
