@@ -4,15 +4,36 @@
     <label for="menu-checkbox" class="menu-list">
       <i class="fas fa-bars"></i>
       <ul>
-        <li>關於我 About Me</li>
-        <li>技能 Skill</li>
-        <li>專案 Project</li>
-        <li>工作經驗 Work Experience</li>
-        <li>學歷 Educatione</li>
+        <li @click="toBlock(1)">關於我 About Me</li>
+        <li @click="toBlock(2)">技能 Skill</li>
+        <li @click="toBlock(3)">專案 Project</li>
+        <li @click="toBlock(4)">工作經驗 Work Experience</li>
+        <li @click="toBlock(5)">學歷 Educatione</li>
       </ul>
     </label>
   </nav>
 </template>
+
+<script>
+
+export default{
+  data() {
+    return {
+      target: 0
+    }
+  },
+  methods: {
+    toBlock(index) {
+      let h2 = document.getElementsByTagName("h2")[index]     
+      this.target = h2.offsetTop - 64
+      window.scrollTo({
+        top: this.target,
+        behavior: "smooth"
+      });
+    }
+  }
+}
+</script>
 
 <style scoped>
   nav {
