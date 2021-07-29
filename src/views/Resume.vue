@@ -1,5 +1,6 @@
 <template>
   <div id="resume">
+    <Nav />
     <Top :aboutMe="aboutMe" />
     <SelfIntroductio :aboutMe="aboutMe" />
     <Skill :skills="skills" />
@@ -14,6 +15,7 @@
 </template>
 
 <script>
+import Nav from '../components/Nav.vue'
 import Top from '../components/Top.vue'
 import SelfIntroductio from '../components/SelfIntroductio.vue'
 import Skill from '../components/Skill.vue'
@@ -26,6 +28,7 @@ import data from '../../resume-data.js'
 
 export default {
   components: {
+    Nav,
     Top,
     SelfIntroductio,
     Skill,
