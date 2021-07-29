@@ -44,23 +44,33 @@ table {
 * {
   -webkit-box-sizing: border-box; 
      -moz-box-sizing: border-box;  
-          box-sizing: border-box; 
+          box-sizing: border-box;
+    text-decoration:none
 }
-
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.5em;
+    text-align: center;
+    color: #333;
+}
 h2 {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
-    border-bottom: solid 2px #101010;
+    border-bottom: solid 2px #333;
     margin-bottom: 1em;
     padding-bottom: .5em;
+    color: #333;
 }
 h3 {
     font-size: 1.5em;
     font-weight: bold;
     line-height: 2em;
+    color: #448E96;
 }
-p, li {
+p, li, a {
+    font-size: 1em;
     line-height: 2em;
     color: #333;
 }
@@ -77,4 +87,22 @@ p, li {
 .vw-80 {
     width: 80vw;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    p, li, a {
+        font-size: .8em;
+    }
+    .wrapper {
+        padding: 2em 0;
+    }
 }

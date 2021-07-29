@@ -7,6 +7,7 @@
         <h2>{{aboutMe.position}}</h2>
       </div>
     </div>
+    <i class="fas fa-chevron-down"></i>
   </div>  
 </template>
 
@@ -23,10 +24,7 @@ export default {
 
 <style scoped>
   h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
-    border-bottom: solid 2px #101010;
+    border-bottom: solid 2px #333;
     margin-bottom: .5em;
     padding-bottom: .5em;
   }
@@ -45,7 +43,7 @@ export default {
   }
   .top-group::after {
     background: url('../../public/img/writing-in-notebook.jpg') no-repeat top 100% center/cover fixed;
-    opacity: .8;
+    opacity: .5;
     position: absolute;
     top: 0; 
     bottom: 0;
@@ -55,7 +53,7 @@ export default {
     z-index: -1; 
   }
   .content {
-    background-color: #fff;
+    padding: 10px;
     height: 75vh;
     display: flex;
     align-items: center;
@@ -75,4 +73,34 @@ export default {
     height: 270px;
     margin-bottom: 2em;
   }
+  .fa-chevron-down {
+    position: absolute;
+    bottom: 1.5em;
+    color: #fff;
+    font-size: 1.5em;
+    animation: slidedown 1.5s infinite;
+  }
+  @keyframes slidedown{
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(25px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .detail {
+      width: 80%;
+    }
+    .picture {
+      width: 150px;
+      height: 150px;
+      border: 5px solid #e4e6db
+    }
+    
+   }
 </style>
